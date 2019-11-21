@@ -1,5 +1,6 @@
 hello/GithubOrgMembershipService.class
 hello/AuthControllerAdvice.class
+hello/EqSearch.class
 hello/WebController.class
 hello/MembershipService.class
 hello/Application.class

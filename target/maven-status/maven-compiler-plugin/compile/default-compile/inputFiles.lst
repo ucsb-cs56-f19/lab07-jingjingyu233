@@ -1,5 +1,6 @@
 /cs/student/jingjingyu/cs56/lab07/src/main/java/hello/Application.java
 /cs/student/jingjingyu/cs56/lab07/src/main/java/hello/WebController.java
+/cs/student/jingjingyu/cs56/lab07/src/main/java/hello/EqSearch.java
 /cs/student/jingjingyu/cs56/lab07/src/main/java/hello/MembershipService.java
 /cs/student/jingjingyu/cs56/lab07/src/main/java/hello/AuthControllerAdvice.java
 /cs/student/jingjingyu/cs56/lab07/src/main/java/hello/GithubOrgMembershipService.java
