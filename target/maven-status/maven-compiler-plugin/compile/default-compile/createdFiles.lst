@@ -4,6 +4,7 @@ hello/AuthControllerAdvice.class
 hello/EqSearch.class
 hello/WebController.class
 hello/geojson/Feature.class
+hello/EarthquakeQueryService.class
 hello/geojson/FeatureCollection.class
 hello/geojson/Metadata.class
 hello/MembershipService.class
