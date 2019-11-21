@@ -62,7 +62,7 @@ public class HomePageTest {
     }
 
     @Test
-    public void getHomePage_hasCorrectBrand() throws Exception {
+    public void getHomePage_has_1() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
                 .andExpect(xpath("/html/body/div/nav/a").exists())
@@ -70,7 +70,7 @@ public class HomePageTest {
     }
     
     @Test
-    public void getHomePage_hasEarthquakes() throws Exception {
+    public void getHomePage_has_2() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
                 .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").exists())

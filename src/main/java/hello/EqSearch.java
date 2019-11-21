@@ -1,20 +1,29 @@
 package hello;
 public class EqSearch {
+
     private int distance;
     private int minmag;
+
+    /*
+    EqSearch(){
+        this.distance = distance;
+        this.minmag = minmag;
+    }
+    */
+     //getters and setters here 
     public int getDistance(){
-        return this.distance;
+	    return this.distance;
     }
+
     public int getMinmag(){
-        return this.minmag;
+	    return this.minmag;
     }
 
-    public void setDistance(int Distance1){
-        this.distance = Distance1;
+    public void setDistance(int d){
+	    this.distance=d;
     }
-
-    public void setMinmag(int Minmag1){
-        this.minmag = Minmag1;
+    
+    public void setMinmag(int m){
+	    this.minmag=m;
     }
-
 }
