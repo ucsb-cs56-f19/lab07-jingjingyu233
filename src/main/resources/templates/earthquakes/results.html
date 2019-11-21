@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en"> 
   <head>
     <title>Earthquake Search Results</title>
     <div th:replace="bootstrap/bootstrap_head.html"></div>
@@ -10,37 +10,44 @@
 
       <h1>Earthquake Search Results</h1>
 
-      <!--
-       <form action="#" th:action="@{/earthquakes/results}" th:object="${eqSearch}" method="get">
-            <table>
-                <tr class="form-group">
-                    <th><label for="distance" class="col-form-label">Distance (km)</label></th>
-                    <td><input type="number" th:field="*{distance}" class="form-control" id="distance"></td>
+     <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Count</th>
+                    <th>Distance (km)</th>
+                    <th>Minimum Magnitude</th>
                 </tr>
-                <tr class="form-group">
-                    <th><label for="minmag" class="col-form-label">Minimum Magnitude</label></th>
-                    <td><input type="number" th:field="*{minmag}" class="form-control" id="minmag"></td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a th:href="${featureCollection.metadata.url}" th:text="${featureCollection.metadata.title}"></a></td>
+                    <td th:text="${featureCollection.metadata.count}"></td>
+                    <td th:text="${eqSearch.distance}"></td>
+                    <td th:text="${eqSearch.minmag}"></td>
                 </tr>
-            </table>
-
-            <input type="submit" class="btn btn-primary" value="Search">
-        </form>
-      -->
-
-        <table>
-            <tr>
-                <th>Distance (km)</th>
-                <td th:text="${eqSearch.distance}"></td>
-            </tr>
-            <tr>
-                <th>Minimum Magnitude</th>
-                <td th:text="${eqSearch.minmag}"></td>
-            </tr>
+            </tbody>
         </table>
 
+      <h2>Earthquakes</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>place</th>
+                    <th>mag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="f: ${featureCollection.features}"> 
+                    <td><a th:href="${f.properties.url}" th:text="${f.id}"></a></td>
+                    <td th:text="${f.properties.place}"></td>
+                    <td th:text="${f.properties.mag}"></td>
+                </tr>
+            </tbody>
+        </table>
       <div th:replace="bootstrap/bootstrap_footer.html"></div>
     </div>
     <div th:replace="bootstrap/bootstrap_scripts.html"></div>
   </body>
 </html>
-
