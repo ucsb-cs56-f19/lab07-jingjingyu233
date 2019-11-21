@@ -15,14 +15,21 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.xpath;
 
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
-@AutoConfigureMockMvc
+@WebMvcTest(WebController.class)
 public class HomePageTest {
 
     @Autowired
     private MockMvc mvc;
+    @MockBean
+    private AuthControllerAdvice aca;
+
+    @MockBean
+    private ClientRegistrationRepository crr;
 
     @Test
     public void getHomePage_ContentType() throws Exception {
@@ -55,28 +62,18 @@ public class HomePageTest {
     }
 
     @Test
-    public void getHomePage_1_hasCorrectTitle() throws Exception {
+    public void getHomePage_hasCorrectBrand() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
                 .andExpect(xpath("/html/body/div/nav/a").exists())
                 .andExpect(xpath("/html/body/div/nav/a").string("lab07"));
     }
+    
     @Test
-    public void getHomePage_2_hasCorrectTitle() throws Exception {
+    public void getHomePage_hasEarthquakes() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
-                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Earthquake Search"));
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").string("Earthquake Search"));
     }
-    /*
-     @Test
-    public void getHomePage_3_hasCorrectTitle() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/page1").accept(MediaType.TEXT_HTML))
-                .andExpect(redirectedUrl("/page1"))
-                .andExpect(xpath("/html/body/div/h1").exists())
-                .andExpect(xpath("/html/body/div/h1").string("Earthquakes"));
-    }
-    */
-
-
 }
