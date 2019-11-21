@@ -37,27 +37,25 @@ public class GithubOrgMembershipService implements MembershipService {
         logger.info("githubOrg=" + githubOrg);
     }
 
-       /** check membership
-     * @param oAuth2AuthenticationToken oauth token 
-     * @return is current logged in user a member but NOT an admin of the github org?
-     * */
+    /**
+     * is current logged in user a member but NOT an admin of the github org
+     */
     public boolean isMember(OAuth2AuthenticationToken oAuth2AuthenticationToken) {
         return hasRole(oAuth2AuthenticationToken, "member");
     }
-  
-       /** check membership
-     * @param oAuth2AuthenticationToken oauth token
-     * @return is current logged in user an admin of the github org?
-     * */
+
+    /** is current logged in user a member of the github org */
     public boolean isAdmin(OAuth2AuthenticationToken oAuth2AuthenticationToken) {
         return hasRole(oAuth2AuthenticationToken, "admin");
     }
 
-       /** check role
-     * @param oauthToken oauth token 
+    /**
+     * is current logged in user has role
+     * @param oauthToken "oauth token"
      * @param roleToTest "member" or "admin"
      * @return if the current logged in user has that role
-     * */
+     */
+
     public boolean hasRole(OAuth2AuthenticationToken oauthToken, String roleToTest) {
         if (oauthToken == null) {
             return false;
