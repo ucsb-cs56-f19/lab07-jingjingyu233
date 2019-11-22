@@ -2,13 +2,11 @@ package hello;
 
 
 import java.util.Arrays;
-import java.util.*;
 
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import org.springframework.web.client.RestTemplate;
+ import org.springframework.web.client.RestTemplate;
 
 
 
