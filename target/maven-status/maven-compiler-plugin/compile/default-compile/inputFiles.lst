@@ -1,10 +1,13 @@
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/geojson/Metadata.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/EarthquakeQueryService.java
+/Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/controllers/UsersController.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/geojson/Feature.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/GithubOrgMembershipService.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/geojson/Properties.java
-/Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/EqSearch.java
+/Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/repositories/UserRepository.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/AuthControllerAdvice.java
+/Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/entities/AppUser.java
+/Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/EqSearch.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/geojson/FeatureCollection.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/WebController.java
 /Users/jingjingyu/Desktop/lab07-jingjingyu233-master/src/main/java/hello/Application.java
