@@ -1,11 +1,11 @@
 
 Travis-CI: https://travis-ci.org/ucsb-cs56-f19/lab07-jingjingyu233
 
-Javadoc: https://ucsb-cs56-f19.github.io/lab07-jingjingyu233/
-
 Heroku: https://cs56-f19-lab07-jingjingyu233.herokuapp.com
 
 Github: https://github.com/ucsb-cs56-f19/lab07-jingjingyu233 Running on Localhost.
+
+Javadoc: https://ucsb-cs56-f19.github.io/lab07-jingjingyu233/
 
 A simple Spring Boot webapp using:
 
