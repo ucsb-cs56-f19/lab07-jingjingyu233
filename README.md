@@ -1,5 +1,5 @@
 
-
+Travis-CI: https://travis-ci.org/ucsb-cs56-f19/lab07-jingjingyu233
 
 Javadoc: https://ucsb-cs56-f19.github.io/lab07-jingjingyu233/
 
